@@ -65,8 +65,18 @@ class _SuperHeroName extends State<SuperHeroNameGenerator> {
   }
 
   Widget _buildRow(String superHeroName) {
+    final _markedFav = _hearted.contains(superHeroName);
     return ListTile(
-      title: Text(superHeroName)
+      title: Text(superHeroName),
+      trailing: Icon(
+        _markedFav ? Icons.favorite : Icons.favorite_border,
+        color: _markedFav ? Colors.red : null,
+      ),
+      onTap: () {
+        setState(() {
+          _markedFav ? _hearted.remove(superHeroName) : _hearted.add(superHeroName);
+        });
+      }
     );
   }
 }
