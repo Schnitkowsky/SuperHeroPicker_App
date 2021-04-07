@@ -90,13 +90,24 @@ class _SuperHeroName extends State<SuperHeroNameGenerator> {
         return Scaffold(
             appBar : AppBar(
               title: Text(_superHeroName),
-            ),
-          body: Center(
-            child: Image.network("https://picsum.photos/200/300")
           ),
-
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.network("https://picsum.photos/150/200"),
+                  Image.network("https://picsum.photos/150/200"),
+                  Image.network("https://picsum.photos/150/200")
+              ]
+            ),
+              Text(_superHeroName)
+            ]
+          ),
         );
       }),
     );
   }
 }
+
