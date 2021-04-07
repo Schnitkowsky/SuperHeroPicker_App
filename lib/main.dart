@@ -92,17 +92,24 @@ class _SuperHeroName extends State<SuperHeroNameGenerator> {
               title: Text(_superHeroName),
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Text(_superHeroName),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Image.network("https://picsum.photos/150/200"),
                   Image.network("https://picsum.photos/150/200"),
                   Image.network("https://picsum.photos/150/200")
               ]
             ),
-              Text(_superHeroName)
+            Row(
+              children: [
+                Image.network("https://picsum.photos/150/200"),
+                Image.network("https://picsum.photos/150/200"),
+                Image.network("https://picsum.photos/150/200")
+              ]
+            )
             ]
           ),
         );
